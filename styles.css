@@ -1,0 +1,173 @@
+/* Global reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align the content at the top */
+    background-color: #f0f4f8; /* Light background color */
+    padding-top: 30px; /* Adjust top padding */
+  }
+  
+  /* Wrapper to hold both left and right sections */
+  .wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 20px; /* Space between left and right sections */
+  }
+  
+  /* Left Section - Form */
+  .left-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 0 0 45%; /* 45% of the width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Right Section - Todo List */
+  .right-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%; /* 45% of the width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* App title styling */
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #4CAF50; /* Green color for the app name */
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the labels */
+  label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+    display: block;
+  }
+  
+  /* Style for the input fields */
+  input {
+    width: 100%;
+    padding: 12px; /* Increased padding for better look */
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Style for the button */
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:active {
+    background-color: #388e3c;
+  }
+  
+  /* Styling for the Todo List Section */
+  #mainArea {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between the todo items */
+  }
+  
+  //* Style for each todo item */
+.todoItem {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px; /* Increased margin to avoid crowding */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Space between the text and the button */
+    align-items: center; /* Vertically center the content */
+    width: 100%; /* Ensure the item takes up full width */
+  }
+  
+  /* Style for the todo text */
+  .todoItem span {
+    font-size: 16px;
+    color: #555;
+    flex: 1; /* Allow text to take up available space */
+    margin-right: 15px; /* Space between text and button */
+    word-wrap: break-word; /* Ensure text doesn't overflow */
+  }
+  
+  .delete-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 70px; /* Set a minimum width to make the button size consistent */
+    text-align: center; /* Ensure the button text is centered */
+  }
+  
+  .delete-btn:hover {
+    background-color: #e60000;
+  }
+  
+  .delete-btn:active {
+    background-color: #cc0000;
+  }
+  
+  
+  /* Title of todo list */
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design Adjustments */
+  @media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column; /* Stack the left and right sections vertically */
+      width: 95%; /* Ensure sections are not too wide on small screens */
+      gap: 10px;
+    }
+  
+    .left-section, .right-section {
+      flex: 1 1 100%; /* Take up full width on small screens */
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 20px; /* Add some space between sections */
+    }
+  }
+  

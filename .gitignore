@@ -1,0 +1,7 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files, temporary files, or other unwanted files
+*.log
+todos.json  # if you don't want to track it, otherwise leave it
+.vscode/    # VSCode project files
